@@ -1,0 +1,20 @@
+GUIDA ALGORITMO: 
+- Lanciare script "MAIN_algoritmoNHIS". All'utente verrà esclusivamente chiesto di selezionare l'immagine source 
+  che desidera normalizzare che deve essere necessariamente inserita in una cartella in cui sono 
+  presenti anche i punti manualmente selezionati per il successivo calcolo del rSE. 
+  Il caricamento dell'immagine target viene fatto in modo automatico. L'immagine target deve essere necessariamente 
+  inserita nella stessa cartella in cui sono presenti le immagini source e i punti selezionati per il calcolo 
+  del rSE. 
+- Automaticamente verranno richiamate nel main le seguenti funzioni in sequenza: 
+	1) "segmentation"
+	2) "optimization_beta" 
+	3) "optimization_alpha" che a sua volta richiama la funzione "rSE_opt"
+	4) "rSE"
+L'output proposto a video all'utente comprende: 
+	- IMMAGINE 1) Immagine contenente l'immagine source originale, l'immagine target, l'immagine source 
+		      normalizzata e relativo rSE calcolato dopo la normalizzazione
+	- IMMAGINE 2) Immagine contenente i punti prescelti dagli autori per il calcolo dell'rSE 
+
+NOTE PER L'UTENTE: 
+Il tempo impiegato dall'algoritmo per normalizzare una singola immagine è circa pari a 120 s.
+Tale tempo viene sensibilmente maggiorato durante l'utilizzo dell'applicazione. 
